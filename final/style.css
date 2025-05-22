@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #FEFAE0;
+    color: black;
+    line-height: 1.5;
+    font-size: 1.5rem;}
+
+header{
+    display: flex;
+    background-color: #606c38;
+    /* position: sticky;
+    top: 0px; */
+}
+
+/* Navigation */
+nav{
+    
+    /* background-color: #283618; */
+    color: white;
+    flex: auto;
+}
+
+nav li{
+    display: inline-block;
+    margin: 1rem;
+    padding: 0rem;
+    line-height: 1rem;
+}
+
+li::marker{
+    list-style: decimal;
+    font-size: 1.5em;
+    /* list-style-position: outside; */
+}
+
+li a:active{
+    color: black;
+}
+
+li a:hover, 
+li a:focus{
+    /* display: inline-block; */
+    color: white;
+    background-color: hsl(32, 65%, 62%);
+    border-radius: 10%;
+    border: 1.5mm white;
+    padding: 1px;
+}
+
+li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menu and Subsection: h1, h2... */
+h1{
+    padding: .50em;
+    flex: auto;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 0.20em;
+    color: white;
+}
+
+h2 h3{
+    /* position: relative; */
+    font-weight: 100;
+    text-align: left;
+    color: white;
+    letter-spacing: 0.09em;
+    line-height: 1em;
+}
+
+/* Boddy Section */
+/* Flexbox  */
+main h1{
+    color: black;
+}
+
+section{
+    padding: 2rem;
+}
+
+.stretches-box{
+    /* display: flex; */
+    flex-wrap: nowrap;
+    /* border: 10px solid red; */
+    /* background-color: lightblue; */
+}
+
+
+.stretches-box p{
+    text-indent: 5%;
+    /* border: 7px solid brown; */
+}
+
+.stretches-box article{
+    display: flex;
+    flex-direction: row;
+    /* border: 7px solid brown; */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stretches-box h2 { 
+    display: flex;
+    width: 100%;
+    /* padding: 2%; */
+    justify-content: center;
+    align-items: center;
+    /* border: 7px solid red; */
+
+}
+
+.stretches-box h3{
+    display: flex;
+    
+    justify-content: center;
+    padding: 2%;
+    width: 100%;
+    /* align-self: center; */
+    /* border: 8px solid white; */
+}
+
+.stretches-box figure{
+    display: flex;
+    flex-direction: column;
+    /* border: 7px solid red; */
+}
+
+.stretches-box img{
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    /* border: 7px solid red; */
+}
+
+.stretches-box figcaption{
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid layout  */
+
+.diffworkouts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+    row-gap: 1em;
+}
+
+.diffworkouts p{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.resting{
+    display: grid;
+    /* grid-auto-flow: column; */
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 20% 1fr;
+    row-gap: 1em;
+    column-width: auto;
+    text-align: left;
+}
+
+.resting p{
+    text-indent: 30px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    text-wrap: wrap;
+}
+
+/* Use Grid layout */
+/* I used grid layout on this section because i wanted to see if i was comfortable using it.  */
+
+.container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 5% 25%;
+    column-gap: 2%;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+}
+.mark{
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    padding: 3%;
+}
+.container h2{
+    text-align: left;
+    color: black;
+    font-weight: 500;
+    padding-left: 5%;
+}
+
+.container h3{
+    font-weight: 300;
+    text-align: left;
+    padding-top: 0%;
+}
+.container p{
+    text-indent: 30px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    padding-left: 5%;
+}
+
+.container ul{
+    padding-inline-start: 5%;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.container figure{
+    margin: 1em;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    text-indent: 30px;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* Table */
+
+tbody, th, td{
+    border: 2px solid black;
+    border-width: 0.25em;
+    height: 100%;
+    text-align: justify;
+}
+
+/* Site-map anchor link */
+
+.site-map a{
+    color: black;
+}
+
+/* Footer */
+
+/* footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+} */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #bc6c25;
+    padding: 1em 0.5em;
+    font-size: 1.5rem; 
+    position: relative;
+    /* bottom: 10; */
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Palette feature */
+.color-box{
+    display: inline-block;
+    margin: 3rem;
+    border: .50rem solid #dda15e;
+    border-radius: 10%;
+}
+
+.primary-dark{
+    background-color: #283618;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.primary{
+    background-color: #606c38;
+    padding: 4rem 4rem;
+}
+
+.primary-light{
+    background-color: #FEFAE0;
+    padding: 4rem 2rem;
+}
+
+.accent{
+    background-color: #bc6c25; 
+    padding: 4rem 4rem;
+}
+
+.accent-light{
+    background-color: #dda15e;
+    padding: 4rem 4.6rem;
+}
